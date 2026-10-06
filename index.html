@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal informasi GPIB Cipeucang. Jadwal ibadah, warta jemaat, pelayanan kategorial, dan kabar komunitas.">
+  <title>GPIB Cipeucang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Damai Kristus menyertai kita semua <span>·</span> Minggu, 6 September 2026</div>
+
+  <header class="site-header" id="beranda">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#beranda" aria-label="GPIB Cipeucang - Beranda">
+        <span class="brand-mark">✦</span>
+        <span><strong>GPIB</strong><small>Cipeucang</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a class="active" href="#beranda">Beranda</a>
+        <a href="#ibadah">Ibadah</a>
+        <a href="#pelayanan kategorial">Pelayanan Kategorial</a>
+        <a href="#warta">Warta Jemaat</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <a class="header-button" href="#ibadah">Lihat jadwal <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="Gedung GPIB Cipeucang"></div>
+      <div class="hero-shade"></div>
+      <div class="shell hero-content">
+        <p class="eyebrow light">Selamat datang di gpib cipeucang</p>
+        <h1>Berakar dalam kasih,<br><em>bertumbuh bersama.</em></h1>
+        <p class="hero-copy">Menjadi jemaat yang menghadirkan damai sejahtera Kristus di tengah dunia, melalui iman, pengharapan, dan kasih.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#ibadah">Jadwal ibadah <span>→</span></a>
+          <a class="text-link light-link" href="#tentang">Kenal lebih dekat <span>↓</span></a>
+        </div>
+      </div>
+      <div class="hero-note"><span class="cross">†</span><span>“Yesus Kristus<br>sumber damai sejahtera”</span></div>
+    </section>
+
+    <section class="intro shell" id="tentang">
+      <div class="section-label"><span>01</span><i></i><span>Tentang kami</span></div>
+      <div class="intro-grid">
+        <h2>Gereja yang hadir<br>untuk <em>melayani.</em></h2>
+        <div>
+          <p class="lead">GPIB Cipeucang adalah persekutuan yang dipanggil untuk menyatakan kasih Allah kepada seluruh ciptaan.</p>
+          <p class="muted">Di tengah denyut kota Jakarta, kami membuka pintu bagi setiap orang untuk beribadah, bersekutu, dan menemukan ruang untuk bertumbuh dalam iman.</p>
+          <a class="text-link dark-link" href="#pelayanan_kategorial">Jelajahi pelayanan kami <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="worship-section" id="ibadah">
+      <div class="shell">
+        <div class="section-heading">
+          <div><div class="section-label on-dark"><span>02</span><i></i><span>Ruang ibadah</span></div><h2>Datang dan <em>beribadah.</em></h2></div>
+          <p>Temukan waktu yang paling tepat untuk berjumpa dalam hadirat Tuhan.</p>
+        </div>
+        <div class="worship-tabs" role="tablist" aria-label="Pilih hari ibadah">
+          <button class="tab active" data-day="minggu" role="tab">Minggu, 6 Sep</button>
+          <button class="tab" data-day="pekan" role="tab">Ibadah pekan ini</button>
+          <button class="tab" data-day="khusus" role="tab">Ibadah khusus</button>
+        </div>
+        <div class="service-list" id="public-schedule-list">
+          <article class="service-card" data-day-card="minggu"><div class="service-time">06:00 <span>WIB</span></div><div class="service-info"><span class="service-type">Ibadah Minggu XV sesudah Pentakosta</span><strong>Penatua Rico J. P. Sihombing</strong></div><a href="#kontak" class="round-arrow" aria-label="Detail ibadah">↗</a></article>
+          <article class="service-card featured" data-day-card="minggu"><div class="service-time">09:00 <span>WIB</span></div><div class="service-info"><span class="service-type">Ibadah Minggu XV sesudah Pentakosta</span><strong>Pdt. Sulvana A. Nussy - Hehanusa</strong></div><a href="#kontak" class="round-arrow" aria-label="Detail ibadah">↗</a></article>
+          <article class="service-card" data-day-card="minggu"><div class="service-time">16:00 <span>WIB</span></div><div class="service-info"><span class="service-type">Sunday Evening Service</span><strong>Rev. Philip Myers</strong></div><a href="#kontak" class="round-arrow" aria-label="Detail ibadah">↗</a></article>
+          <article class="service-card" data-day-card="minggu"><div class="service-time">18:00 <span>WIB</span></div><div class="service-info"><span class="service-type">Ibadah Minggu XV sesudah Pentakosta</span><strong>Pdt. Margie Ivonne Ririhena - de Wanna</strong></div><a href="#kontak" class="round-arrow" aria-label="Detail ibadah">↗</a></article>
+        </div>
+        <div class="stream-banner"><span class="live-dot"></span><span>Ibadah juga dapat diikuti melalui <strong>live streaming</strong></span><a href="#kontak">Kunjungi kanal YouTube ↗</a></div>
+      </div>
+    </section>
+
+    <section class="news-section shell" id="warta">
+      <div class="section-heading light-heading"><div><div class="section-label"><span>03</span><i></i><span>Kabar jemaat</span></div><h2>Berita dan <em>warta.</em></h2></div><a class="text-link dark-link" href="#warta">Lihat semua kabar <span>→</span></a></div>
+      <div class="news-grid">
+        <article class="news-card main-news" id="public-latest-news"><div class="news-tag">Warta Jemaat</div><div class="news-date">06 September 2026</div><h3>Dipanggil untuk menghadirkan kasih Allah dalam seluruh ciptaan.</h3><a class="text-link dark-link" href="#kontak">Baca warta minggu ini <span>→</span></a></article>
+        <article class="news-card"><div class="news-icon">◌</div><div class="news-date">Kegiatan jemaat</div><h3>One Sound Festival 2026</h3><p>Perayaan musik dan kebersamaan lintas generasi.</p><a class="text-link dark-link" href="#kontak">Selengkapnya <span>→</span></a></article>
+        <article class="news-card"><div class="news-icon">✧</div><div class="news-date">Kunjungan gereja</div><h3>Menelusuri jejak sejarah Cipeucang</h3><p>Gereja kami terbuka untuk kunjungan wisata religi dan studi.</p><a class="text-link dark-link" href="#kontak">Selengkapnya <span>→</span></a></article>
+      </div>
+    </section>
+
+    <section class="ministry-section" id="pelayanan kategorial">
+      <div class="shell">
+        <div class="section-heading"><div><div class="section-label"><span>04</span><i></i><span>Ruang bertumbuh</span></div><h2>Pelayanan untuk<br><em>setiap generasi.</em></h2></div><p>Setiap orang punya tempat untuk melayani, belajar, dan berbagi.</p></div>
+        <div class="ministry-grid">
+          <a class="ministry-card" href="#kontak"><span class="ministry-number">01</span><h3>Pelayanan Anak</h3><span class="card-arrow">↗</span></a>
+          <a class="ministry-card" href="#kontak"><span class="ministry-number">02</span><h3>Persekutuan Teruna</h3><span class="card-arrow">↗</span></a>
+          <a class="ministry-card" href="#kontak"><span class="ministry-number">03</span><h3>Gerakan Pemuda</h3><span class="card-arrow">↗</span></a>
+          <a class="ministry-card" href="#kontak"><span class="ministry-number">04</span><h3>Kaum Perempuan</h3><span class="card-arrow">↗</span></a>
+          <a class="ministry-card" href="#kontak"><span class="ministry-number">05</span><h3>Kaum Bapak</h3><span class="card-arrow">↗</span></a>
+          <a class="ministry-card" href="#kontak"><span class="ministry-number">06</span><h3>Kaum Lanjut Usia</h3><span class="card-arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme-section"><div class="shell theme-wrap"><div class="theme-quote">“</div><div><div class="section-label on-dark"><span>05</span><i></i><span>Tema GPIB 2025 - 2026</span></div><blockquote>“Memperteguh panggilan dan pengutusan gereja secara intergenerasional dengan mendayagunakan teknologi digital untuk mewujudkan kasih Allah dalam seluruh ciptaan.”</blockquote><cite>Yesaya 42: 5 - 7</cite></div><div class="theme-mark">✦</div></div></section>
+
+    <section class="contact-section" id="kontak"><div class="shell contact-grid"><div><div class="section-label"><span>06</span><i></i><span>Kunjungi kami</span></div><h2>Rumah yang<br>selalu <em>terbuka.</em></h2><p class="muted">Kami menantikan kehadiran Anda di GPIB Cipeucang.</p><a class="button button-dark" href="https://maps.google.com/?q=GPIB+Cipeucang" target="_blank" rel="noreferrer">Buka di Google Maps ↗</a></div><div class="contact-details"><div><span>Alamat</span><strong>Silakan isi alamat gereja Cipeucang<br>Jakarta</strong></div><div><span>Hubungi kami</span><strong>Silakan isi nomor kantor<br>Nomor WhatsApp gereja</strong></div><div><span>Email</span><strong>Silakan isi email gereja</strong></div></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><a class="brand footer-brand" href="#beranda"><span class="brand-mark">✦</span><span><strong>GPIB</strong><small>Cipeucang</small></span></a><p>Menjadi gereja yang berakar, bertumbuh, dan berbuah dalam kasih Kristus.</p><div class="socials"><a href="#kontak" aria-label="Instagram">ig</a><a href="#kontak" aria-label="YouTube">yt</a><a href="#kontak" aria-label="Facebook">fb</a></div></div><div class="shell footer-bottom"><span>© 2026 GPIB Cipeucang</span><span>Yesus Kristus sumber damai sejahtera</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

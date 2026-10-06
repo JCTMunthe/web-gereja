@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | GPIB Cipeucang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body{background:#e4e8dd}.admin-shell{max-width:1100px;margin:auto;padding:30px 22px 70px}.admin-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px}.admin-top h1{font:500 34px "Playfair Display",serif;margin:0}.admin-top p{font-size:12px;color:#65716c;margin:6px 0}.admin-card{background:#f6f3eb;padding:26px;margin-bottom:18px;border:1px solid rgba(24,42,40,.12)}.admin-card h2{font-size:25px;margin:0 0 20px}.admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.schedule-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}.schedule-slot{border:1px solid #c9d0c5;padding:14px;background:#fff}.schedule-slot h3{margin:0 0 14px;font:600 18px "Playfair Display",serif;color:#16332f}.admin-field{display:flex;flex-direction:column;gap:7px}.admin-field.full{grid-column:1/-1}.admin-field label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#65716c}.admin-field input{border:1px solid #c9d0c5;background:white;padding:12px;font:inherit;font-size:13px;color:#182a28}.fixed-time{background:#e4e8dd!important;color:#65716c!important;cursor:not-allowed}.admin-actions{display:flex;gap:10px;margin-top:18px}.admin-button{border:0;background:#16332f;color:#fff;padding:12px 18px;font:600 11px "DM Sans",sans-serif;cursor:pointer}.admin-button.secondary{background:#c6a060;color:#16332f}.admin-button.danger{background:#9a5143}.admin-message{font-size:12px;margin:14px 0 0;color:#9a5143}.admin-message.success{color:#39725b}.admin-table{width:100%;border-collapse:collapse;font-size:12px}.admin-table th,.admin-table td{text-align:left;border-bottom:1px solid #d5d9d0;padding:12px 8px;vertical-align:top}.admin-table th{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#65716c}.login-card{max-width:450px;margin:12vh auto}.hidden{display:none!important}.logout{font-size:11px;color:#9a5143;cursor:pointer;border:0;background:none}.empty{color:#65716c;font-size:13px}@media(max-width:650px){.admin-grid,.schedule-slots{grid-template-columns:1fr}.admin-field.full{grid-column:auto}.admin-top{align-items:flex-start;gap:20px}.admin-table{display:block;overflow-x:auto;white-space:nowrap}}
+  </style>
+</head>
+<body>
+  <div class="announcement">Panel pengurus <span>·</span> GPIB Cipeucang</div>
+  <main class="admin-shell">
+    <section class="admin-card login-card" id="login-panel">
+      <div class="section-label"><span>Admin</span><i></i><span>Masuk pengurus</span></div>
+      <h1>Selamat datang kembali.</h1>
+      <p class="muted">Gunakan email pengurus yang terdaftar di Supabase.</p>
+      <form id="login-form"><div class="admin-field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"></div><div class="admin-field" style="margin-top:14px"><label for="password">Password</label><input id="password" type="password" required autocomplete="current-password"></div><div class="admin-actions"><button class="admin-button" type="submit">Masuk ke panel</button></div><p class="admin-message" id="login-message"></p></form>
+    </section>
+    <section class="hidden" id="dashboard">
+      <div class="admin-top"><div><h1>Panel pengurus</h1><p>Kelola jadwal ibadah dan warta jemaat.</p></div><button class="logout" id="logout">Keluar</button></div>
+      <div class="admin-card"><h2>Jadwal ibadah utama</h2><form id="schedule-form"><div class="admin-field"><label for="schedule-date">Tanggal</label><input id="schedule-date" type="date" required></div><div class="schedule-slots"><div class="schedule-slot"><h3>06:00 WIB</h3><div class="admin-field"><label for="schedule-06-title">Ibadah</label><input id="schedule-06-title" required placeholder="Ibadah Minggu"></div><div class="admin-field" style="margin-top:14px"><label for="schedule-06-minister">Nama pendeta</label><input id="schedule-06-minister" required placeholder="Pdt. Nama"></div></div><div class="schedule-slot"><h3>09:00 WIB</h3><div class="admin-field"><label for="schedule-09-title">Ibadah</label><input id="schedule-09-title" required placeholder="Ibadah Minggu"></div><div class="admin-field" style="margin-top:14px"><label for="schedule-09-minister">Nama pendeta</label><input id="schedule-09-minister" required placeholder="Pdt. Nama"></div></div><div class="schedule-slot"><h3>17:00 WIB</h3><div class="admin-field"><label for="schedule-17-title">Ibadah</label><input id="schedule-17-title" required placeholder="Ibadah Minggu"></div><div class="admin-field" style="margin-top:14px"><label for="schedule-17-minister">Nama pendeta</label><input id="schedule-17-minister" required placeholder="Pdt. Nama"></div></div></div><div class="admin-actions"><button class="admin-button secondary" type="submit">Simpan jadwal utama</button></div><p class="admin-message" id="schedule-message"></p></form></div>
+      <div class="admin-card"><h2>Tambah warta jemaat</h2><form id="news-form"><div class="admin-grid"><div class="admin-field"><label for="news-date">Tanggal</label><input id="news-date" type="date" required></div><div class="admin-field"><label for="news-title">Judul warta</label><input id="news-title" required placeholder="Warta Jemaat minggu ini"></div><div class="admin-field full"><label for="news-url">Link PDF warta</label><input id="news-url" type="url" placeholder="https://.../warta.pdf"></div></div><div class="admin-actions"><button class="admin-button secondary" type="submit">Simpan warta</button></div><p class="admin-message" id="news-message"></p></form></div>
+      <div class="admin-card"><h2>Jadwal tersimpan</h2><div id="schedule-table"><p class="empty">Memuat data...</p></div></div>
+      <div class="admin-card"><h2>Warta tersimpan</h2><div id="news-table"><p class="empty">Memuat data...</p></div></div>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
